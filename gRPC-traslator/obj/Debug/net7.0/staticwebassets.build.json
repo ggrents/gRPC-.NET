@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "wdjZieihE/0+lMs4vkzFaOcf24zuRPA1aQNyoe7Cl5U=",
+  "Source": "gRPC-translator",
+  "BasePath": "_content/gRPC-translator",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

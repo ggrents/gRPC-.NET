@@ -1,13 +1,23 @@
 ﻿using Grpc.Net.Client;
-using userManagement_client;
+using ClienTgRPC_traslator.Protos;
 
+// список слов для получения перевода
+var words = new List<string>() { "red", "yellow", "green" };
 
-using var channel = GrpcChannel.ForAddress("http://localhost:5124");
+// создаем канал для обмена сообщениями с сервером
+// параметр - адрес сервера gRPC
+using var channel = GrpcChannel.ForAddress("https://localhost:7134");
+
 // создаем клиент
-var client = new Greeter.GreeterClient(channel);
-Console.Write("Введите имя: ");
-string? name = Console.ReadLine();
+var client = new Translator.TranslatorClient(channel);
 
-var reply = await client.SayHelloAsync(new HelloRequest { Name = name });
-Console.WriteLine($"Ответ сервера: {reply.Message}");
-Console.ReadKey();
+// отправляем каждое слово сервису для получения перевода
+foreach (var word in words)
+{
+    // формируем сообщение для отправки
+    Request request = new Request { Word = word };
+    // отправляем сообщение и получаем ответ
+    Response response = await client.TranslateAsync(request);
+    // выводим слово и его перевод
+    Console.WriteLine($"{response.Word} : {response.Translation}");
+}

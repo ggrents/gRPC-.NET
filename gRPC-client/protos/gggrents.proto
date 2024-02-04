@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "ClienTgRPC_traslator.Protos";
+
+package gggrents;
+ 
+message Request{
+    string word = 1;
+}
+ 
+message Response{
+    string word = 1;
+    string translation = 2;
+}
+ 
+service Translator {
+
+  rpc Translate (Request) returns (Response);
+}

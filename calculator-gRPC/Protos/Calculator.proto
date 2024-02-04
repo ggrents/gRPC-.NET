@@ -1,0 +1,21 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "calculator_gRPC.eee";
+
+package calculator;
+
+
+service CalculatorService {  
+  rpc DoCalculation (CalcRequest) returns (CalcResponse);
+}
+
+message CalcRequest {
+	sint32 x = 1;
+	sint32 y = 2;
+	string operation = 3;
+}
+
+message CalcResponse {
+	sint32 z = 1;
+}
+

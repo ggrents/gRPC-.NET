@@ -1,0 +1,2 @@
+obj\Debug\net7.0\protos/Gggrents.cs \
+obj\Debug\net7.0\protos/GggrentsGrpc.cs: protos/gggrents.proto

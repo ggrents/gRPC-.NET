@@ -4,18 +4,18 @@ option csharp_namespace = "userManagement_gRPC";
 
 package greet;
 
-// The greeting service definition.
-service Greeter {
-  // Sends a greeting
-  rpc SayHello (HelloRequest) returns (HelloReply);
+
+service CalculationService {  
+  rpc DoCalculation (CalcRequest) returns (CalcResponse);
 }
 
-// The request message containing the user's name.
-message HelloRequest {
-  string name = 1;
+message CalcRequest {
+	sint32 x = 1;
+	sint32 y = 2;
+	string operation = 3;
 }
 
-// The response message containing the greetings.
-message HelloReply {
-  string message = 1;
+message CalcResponse {
+	sint32 z = 1;
 }
+
