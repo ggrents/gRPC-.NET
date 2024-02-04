@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "TmiTKm2Xg9nc2rSCj1K+4bhWA+iv2ykqmpOdh3chiok=",
+  "Source": "userManagement-gRPC",
+  "BasePath": "_content/userManagement-gRPC",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
